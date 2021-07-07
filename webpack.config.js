@@ -17,9 +17,7 @@ module.exports = {
     rules: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader'
-      }
+      use: ['babel-loader']
     },
     {
       test: /\.(css|scss)$/,
@@ -27,7 +25,7 @@ module.exports = {
     },
     {
       test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      loader: 'url-loader?limit=100000'
+      use: 'url-loader?limit=100000'
     }
     ]
   },
